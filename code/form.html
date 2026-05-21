@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Adding formm to a website
+        </title>
+    </head>
+    <body>
+        
+        <!-- it has some of the attributes in the opening tag such as action which sends the data of the form to backend file named inside it, then there is method which have two values either post or get, in post it will display the confidential data and in get it will display the unconfidential data, sometimes a large file is to be send then an attribute named enctype is used in which a file is send in multiparts as a form-data-->
+
+        <form>
+            
+            <label for="UserName:">UserName: </label>
+            <input type="text" name="UserName:" id="UserName:" minlength="6" required> <!--required means these fields or boxes are important to be filled and the id in input should be same as of for in label, minlength is used when we want to specify the minimum length of the input-->
+
+            <br><br>
+            <label for="Email:">Email: </label>
+            <input type="email" name="Email" id="Email:">
+
+            <br><br>
+            <label for="Mobile:">Contact Number:</label>
+            <input type="tel" name="Mobile" minlength="10" placeholder="Your Mobile Number" pattern="[0-9]{5}-[0-9]{5}" id="Mobile:"> <!--placeholder is used when we want to display some text in the filling box, either display the pattern otherwise dont use ut alone use it with javascript to make it user friendly-->
+
+            <br><br>
+            <label for="Password:">Password:</label>
+            <input type="password" name="" id="Password:" virtualkeyboardpolicy="true" required>
+            <!--to display the password intigration of js is required-->
+
+            <br><br>
+            <label for="Birthday:">Date of birth:</label>
+            <input type="date" name="Birthday" id="Birthday:" required>
+
+            <br><br>
+            <label for="Age:">Age</label>
+            <input type="number" name="Age" id="Age:" required>
+
+            <br><br>
+            <label for="title:">title</label>
+
+            <label for="Mr.">Mr.</label>
+            <input type="radio" name="title" id="Mr." value="Mr.">
+            <label for="Ms.">Ms.</label>
+            <input type="radio" name="title" id="Ms." value="Ms.">
+            <label for="Mrs.">Mrs.</label>
+            <input type="radio" name="title" id="Mrs." value="Mrs.">
+
+            <br><br>
+            <label for="Payment:">Payment</label>
+            <select name="Payment" id="Payment:">
+                <option value="Visa:">Visa</option>
+                <option value="Master:">Master</option>
+                <option value="UPI:">UPI</option>
+                <option value="COD:">COD</option>
+            </select>
+
+            <br><br>
+            <label for="checkboxes:">checkboxe</label>
+            <input type="checkbox" name="checkbox" id="checkboxes:">
+
+            <br><br>
+            <label for="comment:">comment</label>
+            <input type="comment" name="comment" id="comment:">
+
+            <br><br>
+            <label for="file:">file</label>
+            <input type="file" name="file" id="file:" accept="image/png, pdf/pdf, audio/mp3, video/mp4"> <!--this will help in specifying the datatype of the file or document we want-->
+
+            <br><br>
+            <label for="reset:">Reset</label>
+            <input type="reset" name="reset" id="reset:">
+
+            <br><br>
+            <input type="reset" name="" id="">
+            <br><br>
+            <input type="submit" name="" id="">
+        </form>
+    </body>
+</html>

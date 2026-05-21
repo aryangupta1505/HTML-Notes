@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML Study Notes</title>
+    <style>
+        /* Subtle enhancement to make table rows highlight when you hover over them */
+        tbody tr:hover {
+            background-color: #fcf8f2;
+        }
+    </style>
+</head>
+<body style="background-color: #fdf6e3; color: #000000; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 50px; line-height: 1.6;">
+    
+    <!-- Header Section for the overall page title -->
+    <header style="text-align: center; margin-bottom: 20px;">
+        <h1 style="font-size: 3rem; margin: 0; color: #111111;">My Study Notes</h1>
+    </header>
+
+    <hr style="border: 0; border-top: 2px solid #333333; margin-bottom: 40px;">
+    
+    <main>
+        <section>
+            <!-- Header section with Title and Video link pushed to the right -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <h2 style="color: #333333; margin: 0; font-size: 1.8rem;">Introduction to HTML</h2>
+                
+                <a href="https://youtu.be/HGTJBPNC-Gw" target="_blank" title="goes to html and css lecture" style="color: #000000; text-decoration: none; font-weight: bold; display: flex; align-items: center; border: 1px solid #ccc; padding: 5px 12px; border-radius: 4px; background-color: #ffffff;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" style="width: 25px; margin-right: 8px;">
+                    Video Link
+                </a>
+            </div>
+
+            <p style="color: #011627; font-size: 1.1rem; margin-top: 15px;">
+                HTML stands for <b>HyperText Markup Language</b>. It is the standard language used to create web pages by structuring content using elements called tags.
+            </p>
+
+            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+            <!-- Section 1: Core Structure Elements -->
+            <h2 style="color: #333333; font-size: 1.5rem;">1. The Core Structure</h2>
+            <p style="color: #011627;">Every valid HTML5 document requires these fundamental building blocks:</p>
+            
+            <ul style="color: #011627; font-size: 1.05rem; padding-left: 20px;">
+                <li style="margin-bottom: 8px;"><b>&lt;!DOCTYPE html&gt;</b> - Tells the browser that this file is an HTML5 document.</li>
+                <li style="margin-bottom: 8px;"><b>&lt;html&gt;</b> - The root container that wraps all the code on the page.</li>
+                <li style="margin-bottom: 8px;"><b>&lt;head&gt;</b> - Contains invisible metadata about the page, links to CSS stylesheets, and character settings.</li>
+                <li style="margin-bottom: 8px;"><b>&lt;title&gt;</b> - Nested inside the head; sets the official title seen on the browser's tab.</li>
+                <li style="margin-bottom: 8px;"><b>&lt;body&gt;</b> - The main container for all visible content (paragraphs, images, tables, headings) displayed to users.</li>
+            </ul>
+
+            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 40px 0;">
+
+            <!-- Section 2: Quick Reference Table with Output Column -->
+            <h2 style="color: #333333; margin-bottom: 20px; font-size: 1.5rem;">2. Essential HTML Tags Quick-Reference</h2>
+            
+            <table border="1" cellpadding="12" style="border-collapse: collapse; width: 100%; background-color: #ffffff; border-color: #cccccc; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 1rem;">
+                <thead>
+                    <tr style="background-color: #eaeaea; color: #111111; text-align: left;">
+                        <th style="width: 15%;">Tag / Attribute</th>
+                        <th style="width: 35%;">What it does</th>
+                        <th style="width: 25%;">Code Example</th>
+                        <th style="width: 25%;">Expected Output (How it Looks)</th>
+                    </tr>
+                </thead>
+                <tbody style="color: #011627;">
+                    <tr>
+                        <td><b>&lt;meta charset="UTF-8"&gt;</b></td>
+                        <td>Tells the browser to use the UTF-8 character encoder so special characters, foreign symbols, and emojis display properly without turning into broken text symbols. Placed inside the <code>&lt;head&gt;</code>.</td>
+                        <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                        <td><i>(Invisible tag. Runs silently in the background)</i></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;meta name="viewport"...&gt;</b></td>
+                        <td>The "mobile-friendly switch". Adjusts the webpage layout width to instantly match whatever device screen width the user opens it on (phone, tablet, desktop). Placed inside the <code>&lt;head&gt;</code>.</td>
+                        <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+                        <td><i>(Invisible tag. Prevents mobile browsers from shrinking pages down)</i></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;header&gt; and &lt;footer&gt;</b></td>
+                        <td>Structural layout elements used to segment pages. <code>&lt;header&gt;</code> contains introductory material (logos, navigation links), while <code>&lt;footer&gt;</code> marks bottom-of-page content (copyrights, links, contact info).</td>
+                        <td><code>&lt;header&gt;Top Nav&lt;/header&gt;<br>... content ...<br>&lt;footer&gt;© 2026&lt;/footer&gt;</code></td>
+                        <td><a href="header_footer.html" target="_blank" title="Leads to header and footer website" style="color: #0066cc; text-decoration: underline;">Header and Footer Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;a&gt; and href</b></td>
+                        <td>The Anchor tag creates clickable hyperlinks. The <code>href</code> attribute acts like an address label providing the actual link destination URL and it can also take you to a different local file. Adding <code>target="_blank"</code> forces the link to launch in a brand new tab. Adding <code>title=""</code> displays a text tooltip when hovering over the link.</td>
+                        <td><code>&lt;a href="https://google.com" target="_blank" title="takes to google browser"&gt;Google&lt;/a&gt;</code> </td>
+                        <td><a href="anchor.html" target="_blank" title="takes to anchor website" style="color: #0066cc; text-decoration: underline;"> Anchor Website </a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;img&gt;</b></td>
+                        <td>Embeds an image into the document. Requires <code>src</code> (path or URL to the graphic file) and <code>alt</code> (text description alternative for screen readers or broken links). Use optional <code>width</code> or <code>height</code> to adjust size. <i>(Empty tag: has no closing tag).</i></td>
+                        <td><code>&lt;img src="dog.png" alt="This is image of Dog" width="200"&gt;</code></td>
+                        <td><a href="Image.html" target="_blank" title="Leads to image website" style="color: #0066cc; text-decoration: underline;"> Image Website </a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;audio&gt; and controls</b></td>
+                        <td>Embeds audio content into a webpage. The <code>src</code> attribute points to the audio file, and the <code>controls</code> attribute is mandatory to show play, pause, and volume buttons to the user. Inside it, <code>&lt;source&gt;</code> specifies the track and format type.</td>
+                        <td><code>&lt;audio controls&gt;<br>&nbsp;&nbsp;&lt;source src="song.mp3" type="audio/mpeg"&gt;<br>&lt;/audio&gt;</code></td>
+                        <td><a href="audio.html" target="_blank" title="Leads to audio website" style="color: #0066cc; text-decoration: underline;">Audio Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;video&gt; and controls</b></td>
+                        <td>Embeds video media onto a webpage. Like audio, it requires the <code>controls</code> attribute to display play, pause, and volume options to the user. You can declare sizing constraints directly using the <code>width</code> or <code>height</code> properties.</td>
+                        <td><code>&lt;video width="320" height="240" controls&gt;<br>&nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>&lt;/video&gt;</code></td>
+                        <td><a href="video.html" target="_blank" title="Leads to video website" style="color: #0066cc; text-decoration: underline;">Video Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;link rel="icon"&gt; (Favicon)</b></td>
+                        <td>Defines a Favicon, which is the tiny shortcut icon displayed next to your website title on browser tabs, bookmarks, and mobile home screens. Placed inside the <code>&lt;head&gt;</code>.</td>
+                        <td><code>&lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;</code></td>
+                        <td><a href="fevicons.html" target="_blank" title="Leads to fevicon website" style="color: #0066cc; text-decoration: underline;">Favicon Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Text Formatting</b></td>
+                        <td>Inline elements (like <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;mark&gt;</code>, etc.) used to alter text appearance and add semantic value. Click the link to view the standalone project page.</td>
+                        <td><code>&lt;a href="text_formatting.html"&gt;Text Formatting&lt;/a&gt;</code></td>
+                        <td><a href="text_formatting.html" target="_blank" title="Leads to text formatting website" style="color: #0066cc; text-decoration: underline;">Text Formatting Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;div&gt; and &lt;span&gt;</b></td>
+                        <td>Generic structural elements used as containers. The <code>&lt;div&gt;</code> is a block-level element used to group large sections, while <code>&lt;span&gt;</code> is an inline element used to target smaller segments of text for styling.</td>
+                        <td><code>&lt;div&gtBlock Content&lt;/div&gt;<br>&lt;span&gt;Inline Content&lt;/span&gt;</code></td>
+                        <td><a href="span_div.html" target="_blank" title="Leads to span and div website" style="color: #0066cc; text-decoration: underline;">Span and Div Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</b></td>
+                        <td>Used to group related items. The <code>&lt;ul&gt;</code> tag creates unordered (bulleted) lists, <code>&lt;ol&gt;</code> creates ordered (numbered) lists, and individual list items are nested inside using <code>&lt;li&gt;</code>.</td>
+                        <td><code>&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>&lt;/ul&gt;</code></td>
+                        <td><a href="list.html" target="_blank" title="Leads to lists website" style="color: #0066cc; text-decoration: underline;">Lists Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Tables (&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;)</b></td>
+                        <td>Used to arrange data into structured rows and columns. The <code>&lt;table&gt;</code> acts as the container, <code>&lt;tr&gt;</code> defines rows, <code>&lt;th&gt;</code> specifies header cells, and <code>&lt;td&gt;</code> defines standard data cells.</td>
+                        <td><code>&lt;table&gt;<br>&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;<br>&lt;/table&gt;</code></td>
+                        <td><a href="table.html" target="_blank" title="Leads to tables website" style="color: #0066cc; text-decoration: underline;">Tables Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;button&gt;</b></td>
+                        <td>Creates a clickable button component. Frequently used within forms or paired with JavaScript to trigger actions on the webpage.</td>
+                        <td><code>&lt;button&gt;Click Me&lt;/button&gt;</code></td>
+                        <td><a href="button.html" target="_blank" title="Leads to button website" style="color: #0066cc; text-decoration: underline;">Button Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;form&gt;</b></td>
+                        <td>Creates a document section containing interactive controls for submitting user information (like text fields, checkboxes, and radio buttons) to a web server.</td>
+                        <td><code>&lt;form action="/submit"&gt;<br>&nbsp;&nbsp;&lt;input type="text"&gt;<br>&lt;/form&gt;</code></td>
+                        <td><a href="form.html" target="_blank" title="Leads to form website" style="color: #0066cc; text-decoration: underline;">Form Website</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;h1&gt; to &lt;h6&gt;</b></td>
+                        <td>Defines structural headings. Size decreases gradually from h1 down to h6. Can be used multiple times across a page as needed.</td>
+                        <td><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></td>
+                        <td><h3 style="margin: 0;">Heading 3</h3></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;p&gt;</b></td>
+                        <td>Defines a standard text block paragraph. Automatically adds visual space before and after.</td>
+                        <td><code>&lt;p&gt;Sample paragraph.&lt;/p&gt;</code></td>
+                        <td><p style="margin: 0;">Sample paragraph.</p></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;pre&gt;</b></td>
+                        <td>Displays preformatted text. The browser honors spaces, tabs, and line breaks exactly how you type them in the editor.</td>
+                        <td>
+<pre style="margin: 0; background-color: #f4f4f4; padding: 5px; border-radius: 3px; font-family: monospace;">&lt;pre&gt;
+  Line One
+  Line Two
+&lt;/pre></pre>
+                        </td>
+                        <td>
+                            <pre style="margin: 0; font-family: monospace; background-color: #fafafa; border: 1px dashed #ddd; padding: 2px;">  Line One
+  Line Two</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;br&gt;</b></td>
+                        <td>Forces a single line break down to the next line. <i>(Empty tag: has no closing tag).</i></td>
+                        <td><code>First line&lt;br&gt;Second line</code></td>
+                        <td>First line<br>Second line</td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;hr&gt;</b></td>
+                        <td>Inserts a visual horizontal line to separate topics. <i>(Empty tag: has no closing tag).</i></td>
+                        <td><code>&lt;hr&gt;</code></td>
+                        <td><hr style="border: 0; border-top: 1px solid #000; margin: 10px 0;"></td>
+                    </tr>
+                    <tr>
+                        <td><b>&lt;b&gt;</b></td>
+                        <td>Applies a <b>bold</b> styling weight to draw attention to specific words.</td>
+                        <td><code>&lt;b&gt;Bold Text&lt;/b&gt;</code></td>
+                        <td><b>Bold Text</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>Commenting</b></td>
+                        <td>Leaves hidden notes for yourself or other developers inside the source code. Ignored by web browsers entirely.</td>
+                        <td><code>&lt;!-- Notes go here --&gt;</code></td>
+                        <td><i>(Nothing displays on screen)</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
